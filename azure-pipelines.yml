@@ -14,6 +14,7 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
+steps:
 - task: AzureFunctionApp@1
   inputs:
     azureSubscription: 'Azure subscription 1(76b69605-bac0-4ca0-b578-8a8c24e0102a)'
