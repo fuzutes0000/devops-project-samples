@@ -18,9 +18,10 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- task: MSBuild@1
+- task: DotNetCoreCLI@2
   inputs:
-    solution: 'dotnet/aspnetcore/functionApp/Application/SampleFunctionApp.sln'
+    command: 'build'
+    projects: 'dotnet/aspnetcore/functionApp/Application/SampleFunctionApp/SampleFunctionApp.csproj'
 - task: CmdLine@2
   inputs:
     script: |
